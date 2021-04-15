@@ -4,9 +4,19 @@ fun main() {
     val meeting = Meeting()
 
     println("Created: $meeting")
+    val participant = Participant()
+    val name = Name()
+    name.name = "Regis"
+    participant.name = name
+    participant.email = "moafembe@gmail.com"
 
-    meeting.addPraticipant("Regis")
+    val canonicalEmail: String = participant.canonicalEmail
 
-    meeting.logger
+    meeting.addPraticipant(participant)
+    println(participant.participantName)
+
+    //println(canonicalEmail)
+    //meeting.meetingName = "Review"
+    //meeting.logger()
 
 }
