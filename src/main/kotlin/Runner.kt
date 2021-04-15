@@ -7,4 +7,6 @@ fun main() {
 
     meeting.addPraticipant("Regis")
 
+    meeting.logger
+
 }

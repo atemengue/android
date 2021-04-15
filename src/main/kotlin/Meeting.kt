@@ -1,6 +1,9 @@
 package  com.rsk
 
 class Meeting {
+
+    internal val logger = Logger()
+
     fun addPraticipant(name: String) {
         if(verifyParticipant(name))
             println("Added $name")
