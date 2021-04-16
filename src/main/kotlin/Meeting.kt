@@ -1,8 +1,15 @@
 package  com.rsk
 
-class Meeting(val meetingName: String) {
+class Meeting(val meetingName: String, val location: Location = Location("")) {
 
     internal val logger = Logger()
+    //var location:  Location = Location("")
+
+    /*constructor(meetingName: String, location: Location):this(meetingName) {
+        // reinistialser
+       this.location = location
+    } */
+
     fun addPraticipant(participant: Participant) {
         if(verifyParticipant(participant))
             println("Added ${participant.name}")
@@ -29,10 +36,7 @@ class Participant(val name:Name, val email: String) {
         get() = email.toUpperCase()
 }
 
-class Name {
-    var name: String = ""
-    set(value: String) {
-        if (value.isNullOrBlank()) throw IllegalArgumentException()
-        field = value
-    }
+
+class Location(val address: String) {
+
 }

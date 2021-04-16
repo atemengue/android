@@ -3,9 +3,11 @@ package com.rsk
 fun main() {
     val meeting = Meeting("React Metting")
 
-    println("Created: $meeting as name ${meeting.meetingName} ")
-    val name = Name()
-    name.name = "Regis"
+   /// val secondMeeting = Meeting("NodeJs Conf", Location("Any address"))
+
+    println("Created: $meeting with name ${meeting.meetingName} at ${meeting.location} ")
+    val name = Name("Regis Atemengue")
+    //name.name = "Regis"
 
     val participant = Participant(name, "moafembe@gmail.com")
 
