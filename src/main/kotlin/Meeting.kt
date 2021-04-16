@@ -1,6 +1,6 @@
 package  com.rsk
 
-open class Meeting(val meetingName: String, val location: Location = Location("")) {
+open class Meeting(val meetingName: String, val location: Location = Room("")) {
 
     internal val logger = Logger()
     //var location:  Location = Location("")
@@ -25,7 +25,7 @@ open class Meeting(val meetingName: String, val location: Location = Location(""
     }
  }
 
-class PersonalReview(meetingName: String, employee: Participant, reviewers: List<Participant>, location: Location = Location(""))
+class PersonalReview(meetingName: String, employee: Participant, reviewers: List<Participant>, location: Location = Location())
     :Meeting(meetingName, location) {
 
         fun closeReview() {

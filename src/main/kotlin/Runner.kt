@@ -1,11 +1,11 @@
 package com.rsk
 
 fun main() {
-    val meeting = Meeting("React Metting")
+    val meeting = Meeting("React Metting", UkAddress("a house", "a street", "a town", "a country", "post code") )
 
    /// val secondMeeting = Meeting("NodeJs Conf", Location("Any address"))
 
-    val review = PersonalReview("Review meeting", Participant(Name("Tyra landry"), "landry@email.com"), listOf(),Location("Room 1"))
+    val review = PersonalReview("Review meeting", Participant(Name("Tyra landry"), "landry@email.com"), listOf(),Room("Room 1"))
 
     // println("Created: $meeting with name ${meeting.meetingName} at ${meeting.location} ")
     println("Created: $review with name ${review.meetingName} at ${review.location} ")

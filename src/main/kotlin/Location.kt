@@ -1,6 +1,5 @@
 package com.rsk
 
 
-class Location(val address: String) {
+abstract class Location
 
-}
