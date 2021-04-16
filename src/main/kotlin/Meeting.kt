@@ -1,6 +1,6 @@
 package  com.rsk
 
-class Meeting(val meetingName: String, val location: Location = Location("")) {
+open class Meeting(val meetingName: String, val location: Location = Location("")) {
 
     internal val logger = Logger()
     //var location:  Location = Location("")
@@ -20,23 +20,24 @@ class Meeting(val meetingName: String, val location: Location = Location("")) {
         return  true
     }
 
-    protected fun verifyMeeting() {
+     protected open fun verifyMeeting() {
 
     }
  }
 
-class Participant(val name:Name, val email: String) {
-    //var name: Name = Name()
-    //var email = ""
+class PersonalReview(meetingName: String, employee: Participant, reviewers: List<Participant>, location: Location = Location(""))
+    :Meeting(meetingName, location) {
 
-    val participantName
-      get() = name.name
+        fun closeReview() {
+            println("Review ended")
+            verifyMeeting()
+        }
 
-    val canonicalEmail
-        get() = email.toUpperCase()
+
+        override  fun verifyMeeting() {
+            println("PersonalReview: verify meeting")
+            super.verifyMeeting()
+        }
 }
 
 
-class Location(val address: String) {
-
-}

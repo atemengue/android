@@ -5,7 +5,13 @@ fun main() {
 
    /// val secondMeeting = Meeting("NodeJs Conf", Location("Any address"))
 
-    println("Created: $meeting with name ${meeting.meetingName} at ${meeting.location} ")
+    val review = PersonalReview("Review meeting", Participant(Name("Tyra landry"), "landry@email.com"), listOf(),Location("Room 1"))
+
+    // println("Created: $meeting with name ${meeting.meetingName} at ${meeting.location} ")
+    println("Created: $review with name ${review.meetingName} at ${review.location} ")
+
+    review.closeReview()
+
     val name = Name("Regis Atemengue")
     //name.name = "Regis"
 
