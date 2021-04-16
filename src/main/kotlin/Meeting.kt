@@ -1,11 +1,8 @@
 package  com.rsk
 
-class Meeting {
+class Meeting(val meetingName: String) {
 
     internal val logger = Logger()
-
-    var meetingName: String = ""
-
     fun addPraticipant(participant: Participant) {
         if(verifyParticipant(participant))
             println("Added ${participant.name}")
@@ -21,9 +18,9 @@ class Meeting {
     }
  }
 
-class Participant {
-    var name: Name = Name()
-    var email = ""
+class Participant(val name:Name, val email: String) {
+    //var name: Name = Name()
+    //var email = ""
 
     val participantName
       get() = name.name
